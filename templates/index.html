@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SCM Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Supply Chain Management Chatbot</h1>
+        <form method="post">
+            <label>Product Name:</label>
+            <input type="text" name="product" required>
+            
+            <label>Your Question:</label>
+            <input type="text" name="question" required>
+            
+            <button type="submit">Ask</button>
+        </form>
+
+        {% if response %}
+            <div class="response-box">
+                <h3>Response:</h3>
+                <p>{{ response }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
